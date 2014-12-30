@@ -48,7 +48,8 @@ if Recipe.all.count < 1
         cook_time: '30 minutes or fewer',
         description: recipe_description,
         ingredients: recipe_ingredients,
-        instructions: recipe_instructions
+        instructions: recipe_instructions,
+        image_url: 'https://www.filepicker.io/api/file/k5DPVQqhQ5Sgt4j6bieA'
       }
     ]
   )
