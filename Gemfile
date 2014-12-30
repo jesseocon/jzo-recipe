@@ -38,6 +38,8 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 #
+gem 'susy'
+gem 'compass-rails', '~> 2.0.0'
 
 #Views
 gem 'slim-rails'
