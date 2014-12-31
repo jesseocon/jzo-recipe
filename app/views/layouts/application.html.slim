@@ -1,0 +1,9 @@
+doctype html
+html lang="en"
+  = render 'shared/head'
+  body
+    = render 'shared/header'
+    .site-inner
+      .l-wrap
+        = yield
+    = render 'shared/footer'
