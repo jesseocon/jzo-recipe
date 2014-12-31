@@ -1,0 +1,42 @@
+.l-wrap {
+  @include container(1140px);
+}
+.l-content {
+  @include cf;
+  @include span(12 of 16);
+  margin-top: 5vh;
+  padding-bottom: 1rem;
+}
+
+.l-sidebar {
+  @include cf;
+  @include span(4 of 16 last);
+  margin-top: 5vh;
+  padding-bottom: 1rem;
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    color: #666;
+    padding-left: 1rem;
+    line-height: 2;
+    text-decoration: none;
+  }
+}
+
+.l-site-header {
+  a {
+    color: #555;
+    text-decoration: none;
+  }
+  .l-site-header__logo {
+    float: left;
+    line-height: 2rem;
+    font-size: 1.5rem;
+  }
+}
+.l-site-footer {
+  margin-top: 5vh;
+}

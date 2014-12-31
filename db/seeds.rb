@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 #
 #
+recipe_default_qty = 15
 recipe_description = "Sriracha, a tangy combination of chiles, vinegar, sugar"\
                      " and garlic, gets its name from the town of Si Racha, Thailand"\
                      " The most common brand in the United States, Huy Fong, sometimes called"\
@@ -36,21 +37,19 @@ recipe_instructions = "1. To make Tempura Green Beans: Grind shiitake mushroom i
                       "Drain on metal rack or paper towels, and repeat with remaining beans.\n"\
                       "4. Meanwhile, to make Sriracha Aïoli: whisk together all "\
                       "ingredients in small bowl. Serve tempura with aïoli."\
-
-
-if Recipe.all.count < 1
-  recipes = Recipe.create(
-    [
-      {
-        name: "Tempura Green Beans",
-        title: 'Tempura Green Beans with Sriracha Aioli',
-        serving_size: 'Serves 6',
-        cook_time: '30 minutes or fewer',
-        description: recipe_description,
-        ingredients: recipe_ingredients,
-        instructions: recipe_instructions,
-        image_url: 'https://www.filepicker.io/api/file/k5DPVQqhQ5Sgt4j6bieA'
-      }
-    ]
-  )
-end
+ 
+recipe_default_hash = {
+                        name: "Tempura Green Beans",
+                        title: 'Tempura Green Beans with Sriracha Aioli',
+                        serving_size: 'Serves 6',
+                        cook_time: '30 minutes or fewer',
+                        description: recipe_description,
+                        ingredients: recipe_ingredients,
+                        instructions: recipe_instructions,
+                        image_url: 'https://www.filepicker.io/api/file/k5DPVQqhQ5Sgt4j6bieA'
+                      }
+# Create 15 recipe items minus the ones that already exist
+recipe_arr = []
+iteration_qty = recipe_default_qty - Recipe.all.count
+iteration_qty.times { recipe_arr.push(recipe_default_hash) }
+recipes = Recipe.create(recipe_arr)

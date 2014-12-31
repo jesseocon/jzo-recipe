@@ -1,0 +1,14 @@
+@include border-box-sizing;
+
+$susy: (
+  columns: 16,
+  global-box-sizing: border-box,
+);
+
+@mixin cf {
+  &:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
