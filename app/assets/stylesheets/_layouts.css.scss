@@ -1,5 +1,9 @@
+.l-site-inner {
+  margin-left: auto;
+  margin-right: auto;
+}
 .l-wrap {
-  @include container(1140px);
+  @include container($content-width);
 }
 .l-content {
   @include cf;
@@ -27,16 +31,21 @@
 }
 
 .l-site-header {
-  a {
-    color: #555;
+  background: $header-bg;
+  .l-site-header__link {
+    color: $header-font-color;
     text-decoration: none;
+    &:hover {
+      color: $header-hover-font-color;
+    }
   }
   .l-site-header__logo {
     float: left;
-    line-height: 2rem;
+    line-height: $header-line-height;
     font-size: 1.5rem;
   }
 }
 .l-site-footer {
-  margin-top: 5vh;
+  background: $footer-bg;
+  /*margin-top: 5vh;*/
 }

@@ -1,0 +1,25 @@
+/* Raw Colors */
+$red-color: rgba(193, 14, 0, 1);
+$gray-color: rgba(107, 96, 96, 1);
+$light-gray-color: rgba(223, 223, 223, 1);
+$dark-gray-color: rgba(21, 9, 8, 1);
+$dark-gray-color-transparent: rgba(21, 9, 8, 0.9);
+$dark-red-color: rgba(91, 7, 0, 1);
+$white-color: #FFF;
+
+/* Background Colors */
+$body-bg: $light-gray-color;
+$header-bg: $light-gray-color;
+$footer-bg: $dark-red-color;
+$main-content-bg: $white-color;
+$menu-bg: $dark-gray-color;
+
+/* Font-colors */
+$header-font-color: $dark-gray-color;
+$header-hover-font-color: $white-color;
+$footer-font-color: $white-color;
+$title-font-color: $dark-gray-color;
+
+/* Measurements */
+$header-line-height: 3rem;
+$content-width: 1140px;

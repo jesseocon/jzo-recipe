@@ -3,4 +3,7 @@
   &:nth-child(4n) {
     @include last;
   }
+  .m-widget__title {
+    color: $footer-font-color;
+  }
 }
